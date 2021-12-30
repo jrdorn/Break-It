@@ -1,10 +1,20 @@
 import * as m from "./modules/index.mjs";
 
-//TODO
-//Bounce in opp direction on brick contact
-//Mod wall collision
-//Restart after spacebar on win screen
-//Tutorial/onboarding
+/** 
+ ||| TODO
+
+  Get app to work after modularizing:
+    Bounce in opp direction on brick contact
+    Mod wall collision
+    Restart after spacebar on win screen
+
+  Before uploading:
+    multiple brick colors, backgrounds, levels
+
+
+  Tutorial/onboarding
+
+ */
 
 (function () {
   // || Event Listeners
@@ -21,7 +31,7 @@ import * as m from "./modules/index.mjs";
     } else if (e.code === "ArrowLeft") {
       Vars.leftPressed = true;
     }
-    //handle spacebar, include closure for state?
+    //||| handle spacebar, include closure for state?
   }
 
   //stop moving paddle when arrow key released
@@ -36,7 +46,7 @@ import * as m from "./modules/index.mjs";
     }
   }
 
-  // || Run game
+  // || Start game
 
   //init classes to run game
   let Vars = new m.Vars();
