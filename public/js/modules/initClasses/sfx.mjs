@@ -1,5 +1,4 @@
 //sound effects for game
-
 export class Sfx {
   constructor() {
     this.brickSounds = [

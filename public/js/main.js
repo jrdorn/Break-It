@@ -3,6 +3,8 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
+  #on start ball flies off screen
+
   Get app to work after modularizing:
     Bounce in opp direction on brick contact
     Mod wall collision
@@ -49,11 +51,11 @@ import * as m from "./modules/index.mjs";
   // || Start game
 
   //init classes to run game
-  let Vars = new m.Vars();
-  let Bricks = new m.Bricks();
-  let Displays = new m.Displays();
-  let Game = new m.Game();
-  let Sfx = new m.Sfx();
+  let Vars = new m.Vars(); //state of (ball, paddle, canvas render), (score, lives, color scheme)
+  let Bricks = new m.Bricks(); //keep track of brick count and parameters
+  let Displays = new m.Displays(); //variables for screens and components to display
+  let Sfx = new m.Sfx(); //sound effects
+  let Game = new m.Game(); //keep track of whether the game is running or not, if the user wins, and the user's score and lives
 
   //initialize bricks on page load
   Bricks.init();
@@ -62,8 +64,8 @@ import * as m from "./modules/index.mjs";
   m.displayScreen(Displays.startDisplay);
 
   //play start sound and draw components when user presses space
-  function run() {
-    //start game
+  let run = () => {
+    //start game if no game is currently running
     m.start(Game, Displays, Vars.canvas, Sfx);
 
     //create canvas
@@ -135,13 +137,15 @@ import * as m from "./modules/index.mjs";
     Vars.x += Vars.dx;
     Vars.y += Vars.dy;
 
+    //
     //exit when game won
     // if (Game.won === true) {
     //   Game.won = false;
     //   return;
     // }
+    //
 
     //display next frame of game
     requestAnimationFrame(run);
-  }
+  };
 })();
