@@ -1,8 +1,8 @@
 //keep track of brick count and parameters
 export class Bricks {
   constructor() {
-    this.brickRowCount = 9;
-    this.brickColumnCount = 5;
+    this.brickRowCount = 2;
+    this.brickColumnCount = 2;
     this.brickWidth = 30;
     this.brickHeight = 12;
     this.brickPadding = 5;

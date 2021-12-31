@@ -105,21 +105,7 @@ import * as m from "./modules/index.mjs";
     m.brickCollision(Bricks, Game, Sfx, Displays, Vars, m);
 
     // //handle collision when ball hits wall
-    // m.wallCollision(
-    //   Sfx,
-    //   Vars.canvas,
-    //   Vars.ballRadius,
-    //   Vars.x,
-    //   Vars.y,
-    //   Vars.dx,
-    //   Vars.dy,
-    //   Vars.paddleX,
-    //   Vars.paddleWidth,
-    //   Game,
-    //   Bricks,
-    //   Displays,
-    //   m
-    // );
+    m.wallPaddleCollision(Sfx, Vars, Game, Bricks, Displays, m);
 
     //handle paddle movement
     Vars = m.movePaddle(Vars);

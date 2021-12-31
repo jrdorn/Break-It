@@ -13,5 +13,5 @@ export { drawLives } from "./draw/drawLives.mjs";
 export { drawPaddle } from "./draw/drawPaddle.mjs";
 export { drawScore } from "./draw/drawScore.mjs";
 export { brickCollision } from "./collision/brickCollision.mjs";
-export { wallCollision } from "./collision/wallCollision.mjs";
+export { wallPaddleCollision } from "./collision/wallPaddleCollision.mjs";
 export { movePaddle } from "./movePaddle.mjs";
