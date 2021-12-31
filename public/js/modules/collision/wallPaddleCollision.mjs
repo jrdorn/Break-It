@@ -25,14 +25,7 @@ export function wallPaddleCollision(Sfx, Vars, Game, Bricks, Displays, m) {
       Game.lives--;
       if (!Game.lives) {
         //display lose screen, exit game and hide canvas/ score/ lives
-        Sfx.loseSound.play();
-        Bricks.init();
-        m.displayScreen(Displays.loseDisplay);
-        Vars.canvas.classList.add("hidden");
-        Displays.slDisplay.classList.add("hidden");
-        m.stop(Game);
-        Game.lives = 4;
-        return;
+        m.stop("lose", Game, Sfx, Bricks, Vars, Displays, m);
       } else {
         Vars.x = Vars.canvas.width / 2;
         Vars.y = Vars.canvas.height - 30;

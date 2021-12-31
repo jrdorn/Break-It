@@ -19,13 +19,7 @@ export function brickCollision(Bricks, Game, Sfx, Displays, Vars, m) {
           }
           //level won when all bricks are smashed
           if (Game.score === Bricks.brickRowCount * Bricks.brickColumnCount) {
-            Sfx.winSound.play();
-            Bricks.init();
-            m.displayScreen(Displays.winDisplay);
-            Vars.canvas.classList.add("hidden");
-            Displays.slDisplay.classList.add("hidden");
-            Game.won = true;
-            m.stop(Game);
+            m.stop("win", Game, Sfx, Bricks, Vars, Displays, m);
           }
         }
       }

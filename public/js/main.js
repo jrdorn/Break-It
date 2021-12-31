@@ -3,23 +3,59 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-  #on start ball flies off screen
+  Fix win screen/ game over bug
+    pause, press space to restart
 
-  Get app to work after modularizing:
-    Bounce in opp direction on brick contact - right now the ball destroys bricks but doesn't bounce back
-    Mod wall collision
-    Restart after spacebar on win screen
+    disable space while game is running
+
+
+
+  Restart after spacebar on win screen
+
+
 
   Before uploading:
     multiple brick colors, backgrounds, levels
-    check all comments
 
 
-  Tutorial/onboarding
+    START SCREEN animation with falling stars or something
+  more art on all screens
+
+
+  fix paddle functionality (ball counted as dropping when it hits edges, angle of edges) 
+
+
+  Make 5 levels
+  changing paddle size and speed
+
+  Change to multicolored shiny baubles instead of bricks, Square Enix/ Puyo Pop inspired paddle and overall design
+
+  mobile functionality
+
+
+
+  check all comments
+
+
 
  */
 
-(function () {
+(() => {
+  // || Initialize
+
+  //classes to run game
+  let Vars = new m.Vars(); //state of (ball, paddle, canvas render), (score, lives, color scheme)
+  let Bricks = new m.Bricks(); //keep track of brick count and parameters
+  let Displays = new m.Displays(); //variables for screens and components to display
+  let Sfx = new m.Sfx(); //sound effects
+  let Game = new m.Game(); //keep track of whether the game is running or not, if the user wins, and the user's score and lives
+
+  //load bricks
+  Bricks.init();
+
+  //display start screen on page load
+  m.displayScreen(Displays.startDisplay);
+
   // || Event Listeners
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -44,25 +80,14 @@ import * as m from "./modules/index.mjs";
     } else if (e.code === "ArrowLeft") {
       Vars.leftPressed = false;
     } else if (e.code === "Space") {
-      //start game when user presses space
-      run();
+      //if no game is running, start game when user presses space
+      if (Game.state === 0) {
+        run();
+      }
     }
   }
 
-  // || Start game
-
-  //init classes to run game
-  let Vars = new m.Vars(); //state of (ball, paddle, canvas render), (score, lives, color scheme)
-  let Bricks = new m.Bricks(); //keep track of brick count and parameters
-  let Displays = new m.Displays(); //variables for screens and components to display
-  let Sfx = new m.Sfx(); //sound effects
-  let Game = new m.Game(); //keep track of whether the game is running or not, if the user wins, and the user's score and lives
-
-  //initialize bricks on page load
-  Bricks.init();
-
-  //display start screen on page load
-  m.displayScreen(Displays.startDisplay);
+  // || Run Game
 
   //play start sound and draw components when user presses space
   let run = () => {
@@ -115,11 +140,8 @@ import * as m from "./modules/index.mjs";
     Vars.y += Vars.dy;
 
     //
-    //exit when game won
-    // if (Game.won === true) {
-    //   Game.won = false;
-    //   return;
-    // }
+    //stop when game won
+
     //
 
     //display next frame of game
