@@ -3,14 +3,8 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-  Fix win screen/ game over bug
-    pause, press space to restart
 
-    disable space while game is running
-
-
-
-  Restart after spacebar on win screen
+  Bug: reset ball coords, counts as drop on game restart- reset direction too?
 
 
 
@@ -140,8 +134,10 @@ import * as m from "./modules/index.mjs";
     Vars.y += Vars.dy;
 
     //
-    //stop when game won
-
+    //break when game ends
+    if (Game.state === 0) {
+      return;
+    }
     //
 
     //display next frame of game
