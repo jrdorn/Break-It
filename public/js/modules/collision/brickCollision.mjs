@@ -1,31 +1,18 @@
 //handle brick collision
-export function brickCollision(
-  Bricks,
-  Game,
-  Sfx,
-  Displays,
-  canvas,
-  x,
-  y,
-  dy,
-  m
-) {
+export function brickCollision(Bricks, Game, Sfx, Displays, Vars, m) {
   for (let c = 0; c < Bricks.brickColumnCount; c++) {
     for (let r = 0; r < Bricks.brickRowCount; r++) {
       let b = Bricks.bricks[c][r];
       if (b.health > 0) {
         if (
-          x > b.x &&
-          x < b.x + Bricks.brickWidth &&
-          y > b.y &&
-          y < b.y + Bricks.brickHeight
+          Vars.x > b.x &&
+          Vars.x < b.x + Bricks.brickWidth &&
+          Vars.y > b.y &&
+          Vars.y < b.y + Bricks.brickHeight
         ) {
           //handle brick collision
           Sfx.randomBrickSound();
-          dy = -dy;
-          ///
-          //TODO: reverse direction of travel upon brick collision
-          ///
+          Vars.dy = -Vars.dy;
           b.health--;
           if (b.health === 0) {
             Game.score++;
@@ -35,7 +22,7 @@ export function brickCollision(
             Sfx.winSound.play();
             Bricks.init();
             m.displayScreen(Displays.winDisplay);
-            canvas.classList.add("hidden");
+            Vars.canvas.classList.add("hidden");
             Displays.slDisplay.classList.add("hidden");
             Game.won = true;
             m.stop(Game);

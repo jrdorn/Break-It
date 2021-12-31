@@ -6,12 +6,13 @@ import * as m from "./modules/index.mjs";
   #on start ball flies off screen
 
   Get app to work after modularizing:
-    Bounce in opp direction on brick contact - right now it just flies through
+    Bounce in opp direction on brick contact - right now the ball destroys bricks but doesn't bounce back
     Mod wall collision
     Restart after spacebar on win screen
 
   Before uploading:
     multiple brick colors, backgrounds, levels
+    check all comments
 
 
   Tutorial/onboarding
@@ -101,17 +102,7 @@ import * as m from "./modules/index.mjs";
     );
 
     //handle collision when ball hits brick
-    // m.brickCollision(
-    //   Bricks,
-    //   Game,
-    //   Sfx,
-    //   Displays,
-    //   Vars.canvas,
-    //   Vars.x,
-    //   Vars.y,
-    //   Vars.dy,
-    //   m
-    // );
+    m.brickCollision(Bricks, Game, Sfx, Displays, Vars, m);
 
     // //handle collision when ball hits wall
     // m.wallCollision(
