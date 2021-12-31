@@ -17,6 +17,7 @@ export function wallCollision(
   //ball bounces off side wall
   if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
     Sfx.wallSound.play();
+    // console.log(canvas.width); 400
     dx = -dx;
   }
 
@@ -53,3 +54,13 @@ export function wallCollision(
     }
   }
 }
+
+/**
+ Vars = m.wallCollision -> cannot move paddle, ball doesn't appear
+ 
+
+
+ ball not detecting wall but plays sound when off screen...
+    wall coords not matching with display coords?
+ 
+ */

@@ -6,7 +6,7 @@ import * as m from "./modules/index.mjs";
   #on start ball flies off screen
 
   Get app to work after modularizing:
-    Bounce in opp direction on brick contact
+    Bounce in opp direction on brick contact - right now it just flies through
     Mod wall collision
     Restart after spacebar on win screen
 
@@ -101,34 +101,34 @@ import * as m from "./modules/index.mjs";
     );
 
     //handle collision when ball hits brick
-    m.brickCollision(
-      Bricks,
-      Game,
-      Sfx,
-      Displays,
-      Vars.canvas,
-      Vars.x,
-      Vars.y,
-      Vars.dy,
-      m
-    );
+    // m.brickCollision(
+    //   Bricks,
+    //   Game,
+    //   Sfx,
+    //   Displays,
+    //   Vars.canvas,
+    //   Vars.x,
+    //   Vars.y,
+    //   Vars.dy,
+    //   m
+    // );
 
-    //handle collision when ball hits wall
-    m.wallCollision(
-      Sfx,
-      Vars.canvas,
-      Vars.ballRadius,
-      Vars.x,
-      Vars.y,
-      Vars.dx,
-      Vars.dy,
-      Vars.paddleX,
-      Vars.paddleWidth,
-      Game,
-      Bricks,
-      Displays,
-      m
-    );
+    // //handle collision when ball hits wall
+    // m.wallCollision(
+    //   Sfx,
+    //   Vars.canvas,
+    //   Vars.ballRadius,
+    //   Vars.x,
+    //   Vars.y,
+    //   Vars.dx,
+    //   Vars.dy,
+    //   Vars.paddleX,
+    //   Vars.paddleWidth,
+    //   Game,
+    //   Bricks,
+    //   Displays,
+    //   m
+    // );
 
     //handle paddle movement
     Vars = m.movePaddle(Vars);
