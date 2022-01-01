@@ -1,6 +1,12 @@
 //draw brick rows and colums on canvas
 
-export function drawBricks(ctx, Bricks, itemColor, brokenColor1, brokenColor2) {
+export let drawBricks = (
+  ctx,
+  Bricks,
+  itemColor,
+  brokenColor1,
+  brokenColor2
+) => {
   for (let c = 0; c < Bricks.brickColumnCount; c++) {
     for (let r = 0; r < Bricks.brickRowCount; r++) {
       if (Bricks.bricks[c][r].health > 0) {
@@ -26,4 +32,4 @@ export function drawBricks(ctx, Bricks, itemColor, brokenColor1, brokenColor2) {
       }
     }
   }
-}
+};

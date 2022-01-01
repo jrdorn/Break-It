@@ -1,5 +1,5 @@
 //handle wall and paddle collision
-export function wallPaddleCollision(Sfx, Vars, Game, Bricks, Displays, m) {
+export let wallPaddleCollision = (Sfx, Vars, Game, Bricks, Displays, m) => {
   //ball bounces off side wall
   if (
     Vars.x + Vars.dx > Vars.canvas.width - Vars.ballRadius ||
@@ -29,10 +29,10 @@ export function wallPaddleCollision(Sfx, Vars, Game, Bricks, Displays, m) {
       } else {
         Vars.x = Vars.canvas.width / 2;
         Vars.y = Vars.canvas.height - 30;
-        Vars.dx = 2;
-        Vars.dy = -2;
+        Vars.dx = 3;
+        Vars.dy = -3;
         Vars.paddleX = (Vars.canvas.width - Vars.paddleWidth) / 2;
       }
     }
   }
-}
+};

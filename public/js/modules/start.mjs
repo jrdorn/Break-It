@@ -1,6 +1,5 @@
 //start game if no game is currently running
-
-export function start(game, displays, canvas, sfx) {
+export let start = (game, displays, canvas, sfx) => {
   //if no game is currently running
   if (game.state === 0) {
     //hide start/ win/ lose screens before starting game
@@ -19,4 +18,4 @@ export function start(game, displays, canvas, sfx) {
     game.state = 1;
     return game; //game running
   }
-}
+};

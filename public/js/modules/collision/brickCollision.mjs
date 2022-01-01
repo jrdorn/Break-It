@@ -1,5 +1,5 @@
 //handle brick collision
-export function brickCollision(Bricks, Game, Sfx, Displays, Vars, m) {
+export let brickCollision = (Bricks, Game, Sfx, Displays, Vars, m) => {
   for (let c = 0; c < Bricks.brickColumnCount; c++) {
     for (let r = 0; r < Bricks.brickRowCount; r++) {
       let b = Bricks.bricks[c][r];
@@ -25,4 +25,4 @@ export function brickCollision(Bricks, Game, Sfx, Displays, Vars, m) {
       }
     }
   }
-}
+};

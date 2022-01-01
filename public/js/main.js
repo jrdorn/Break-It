@@ -3,34 +3,49 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
+   arrow functions
 
-  Bug: reset ball coords, counts as drop on game restart- reset direction too?
 
+     START SCREEN animation with falling stars or something
+  more art on all screens
+
+
+  Level 1:
+    -ball speed:
+    -paddle size:
+
+  Level 2:
+    -ball speed:
+    -paddle size:
+
+    Level 3:
+    -ball speed:
+    -paddle size:
+
+    Level 4:
+    -ball speed:
+    -paddle size:
+
+    Level 5:
+    -ball speed:
+    -paddle size:
 
 
   Before uploading:
     multiple brick colors, backgrounds, levels
 
 
-    START SCREEN animation with falling stars or something
-  more art on all screens
-
 
   fix paddle functionality (ball counted as dropping when it hits edges, angle of edges) 
 
 
-  Make 5 levels
-  changing paddle size and speed
-
   Change to multicolored shiny baubles instead of bricks, Square Enix/ Puyo Pop inspired paddle and overall design
 
-  mobile functionality
-
-
+  add mobile functionality
 
   check all comments
 
-
+  refactor
 
  */
 

@@ -1,5 +1,5 @@
 //move paddle back and forth
-export function movePaddle(Vars) {
+export let movePaddle = (Vars) => {
   if (
     Vars.rightPressed &&
     Vars.paddleX < Vars.canvas.width - Vars.paddleWidth
@@ -9,4 +9,4 @@ export function movePaddle(Vars) {
     Vars.paddleX -= 5;
   }
   return Vars;
-}
+};

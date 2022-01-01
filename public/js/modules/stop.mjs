@@ -1,5 +1,5 @@
 //mark game as stopped and reset score and lives
-export function stop(winOrLose, Game, Sfx, Bricks, Vars, Displays, m) {
+export let stop = (winOrLose, Game, Sfx, Bricks, Vars, Displays, m) => {
   if (winOrLose === "win") {
     //
     Sfx.winSound.play();
@@ -26,4 +26,4 @@ export function stop(winOrLose, Game, Sfx, Bricks, Vars, Displays, m) {
   Vars.y = Vars.canvas.height - 30;
   Vars.dx = 3;
   Vars.dy = -3;
-}
+};
