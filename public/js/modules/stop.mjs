@@ -18,12 +18,17 @@ export let stop = (winOrLose, Game, Sfx, Bricks, Vars, Displays, m) => {
     //
   }
 
-  //reset state, score, lives, ball coordinates
+  //reset state, score, lives
   Game.state = 0;
   Game.score = 0;
   Game.lives = 3;
+
+  //ball coordinates
   Vars.x = Vars.canvas.width / 2;
   Vars.y = Vars.canvas.height - 30;
   Vars.dx = 3;
   Vars.dy = -3;
+
+  //paddle position
+  Vars.paddleX = (Vars.canvas.width - Vars.paddleWidth) / 2;
 };

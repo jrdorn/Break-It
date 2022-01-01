@@ -3,43 +3,70 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-   arrow functions
 
+  offset rainbow baubles instead of bricks
 
-     START SCREEN animation with falling stars or something
-  more art on all screens
+  screen frame:  
+
+  paddle: gold with flourishes on edges (gears moving in bg when paddle moves?)
+  ball: four-point gold star with rainbow trailing direction of travel
+
+  
+
+  Start screen:
+    -bg: falling stars
 
 
   Level 1:
-    -ball speed:
+    -ball speed: 3
     -paddle size:
+    -bg: cotton candy
+
 
   Level 2:
-    -ball speed:
+    -ball speed: 2
     -paddle size:
+    -bg: checkerboard cookies
+
 
     Level 3:
-    -ball speed:
+    -ball speed: 4
     -paddle size:
+    -bg: waffles
+
 
     Level 4:
-    -ball speed:
+    -ball speed: 5
     -paddle size:
+    -bg: strawberry shortcake
+
 
     Level 5:
-    -ball speed:
+    -ball speed: 6
     -paddle size:
+    -bg: fruit
 
 
-  Before uploading:
-    multiple brick colors, backgrounds, levels
+  Win screen:
+    -bg: gold text, blue sky with clouds
+
+
+  Lose screen: 
+    -bg: red text, spotlight in darkness
 
 
 
-  fix paddle functionality (ball counted as dropping when it hits edges, angle of edges) 
+  design inspo: square enix, puyo pop
 
 
-  Change to multicolored shiny baubles instead of bricks, Square Enix/ Puyo Pop inspired paddle and overall design
+
+
+
+
+  fix paddle functionality (ball counted as dropping when it hits edges, 
+    angle of edges) 
+
+
 
   add mobile functionality
 
