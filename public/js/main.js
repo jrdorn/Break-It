@@ -6,10 +6,13 @@ import * as m from "./modules/index.mjs";
 
   offset rainbow baubles instead of bricks
 
-  screen frame:  
+  screen frame: ###
 
   paddle: gold with flourishes on edges (gears moving in bg when paddle moves?)
-  ball: four-point gold star with rainbow trailing direction of travel
+  ## ball: four-point gold ninja star, spinning in a circle, with rainbow trailing direction of travel
+  new favicon: ###
+
+  score/ lives: white/ gold text, retro font
 
   
 
@@ -19,37 +22,28 @@ import * as m from "./modules/index.mjs";
 
   Level 1:
     -ball speed: 3
-    -paddle size:
+    -brick health: 1
     -bg: cotton candy
+
 
 
   Level 2:
     -ball speed: 2
-    -paddle size:
+    -brick health: 2
     -bg: checkerboard cookies
 
 
     Level 3:
     -ball speed: 4
-    -paddle size:
+    -brick health: 3
     -bg: waffles
-
-
-    Level 4:
-    -ball speed: 5
-    -paddle size:
-    -bg: strawberry shortcake
-
-
-    Level 5:
-    -ball speed: 6
-    -paddle size:
-    -bg: fruit
 
 
   Win screen:
     -bg: gold text, blue sky with clouds
 
+  Congrats screen (between levels)
+    -bg: ###
 
   Lose screen: 
     -bg: red text, spotlight in darkness
@@ -73,6 +67,14 @@ import * as m from "./modules/index.mjs";
   check all comments
 
   refactor
+
+
+  notes:
+    design: gimp, preview, keynote
+    approaching problem from different angles, which tool to choose in gimp
+    modularizing code- glitches, losing state, wrote as one then breaking it apart and getting main to run again
+
+
 
  */
 
@@ -143,7 +145,7 @@ import * as m from "./modules/index.mjs";
     );
 
     //draw ball
-    m.drawBall("img/ball.png", Vars.ctx, Vars.x, Vars.y);
+    m.drawBall("img/ninja_star.png", Vars.ctx, Vars.x, Vars.y);
 
     //draw paddle
     m.drawPaddle(
