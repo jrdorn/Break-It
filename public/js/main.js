@@ -3,13 +3,14 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-
-  offset rainbow baubles instead of bricks
-
-  screen frame: ###
-
-  paddle: gold with flourishes on edges (gears moving in bg when paddle moves?)
   ## ball: four-point gold ninja star, spinning in a circle, with rainbow trailing direction of travel
+
+
+  rainbow bricks
+
+  screen frame: greek columns
+
+
   new favicon: ###
 
   score/ lives: white/ gold text, retro font
@@ -17,41 +18,36 @@ import * as m from "./modules/index.mjs";
   
 
   Start screen:
-    -bg: falling stars
+    -bg: clouds and mountains scrolling
 
 
   Level 1:
     -ball speed: 3
     -brick health: 1
-    -bg: cotton candy
+    -bg: clouds moving
 
 
 
   Level 2:
     -ball speed: 2
     -brick health: 2
-    -bg: checkerboard cookies
+    -bg: fire/ volcano
 
 
     Level 3:
     -ball speed: 4
     -brick health: 3
-    -bg: waffles
+    -bg: stars falling across space
 
 
   Win screen:
-    -bg: gold text, blue sky with clouds
+    -bg: gold text, faint yellow bg
 
   Congrats screen (between levels)
-    -bg: ###
+    -bg: same as win
 
   Lose screen: 
     -bg: red text, spotlight in darkness
-
-
-
-  design inspo: square enix, puyo pop
-
 
 
 
@@ -61,18 +57,22 @@ import * as m from "./modules/index.mjs";
     angle of edges) 
 
 
-
-  add mobile functionality
-
   check all comments
 
   refactor
+
+
+
 
 
   notes:
     design: gimp, preview, keynote
     approaching problem from different angles, which tool to choose in gimp
     modularizing code- glitches, losing state, wrote as one then breaking it apart and getting main to run again
+    design inspo: square enix, puyo pop
+
+    rotating image on canvas: rotate canvas, set image orientation, reset canvas
+
 
 
 
