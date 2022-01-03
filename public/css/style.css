@@ -7,9 +7,11 @@
 
 html,
 body {
-  margin: 0;
+  margin: auto;
   margin-top: 3vh;
   padding: 0;
+  max-width: 720px;
+  min-width: 720px;
 }
 
 /* alternative box model */

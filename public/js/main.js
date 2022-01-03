@@ -4,7 +4,8 @@ import * as m from "./modules/index.mjs";
  ||| TODO
 
 
-  #screen frame: greek columns
+  #screen frame
+    add greek columns
 
 
   # score/ lives: white/ gold text, retro font
@@ -41,7 +42,7 @@ import * as m from "./modules/index.mjs";
       -bg: stars falling across space
 
 
-  # Paddle color and functionality (ball counted as dropping when it hits edges, 
+  # Paddle functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
 
   #check browser compatibility 
@@ -139,7 +140,6 @@ import * as m from "./modules/index.mjs";
     //draw paddle
     m.drawPaddle(
       Vars.paddleX,
-      Vars.itemColor,
       Vars.ctx,
       Vars.canvas.height,
       Vars.paddleWidth,

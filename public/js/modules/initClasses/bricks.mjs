@@ -12,7 +12,7 @@ export class Bricks {
 
     this.health3 = [
       "#f9524e",
-      "#fdaf45",
+      "#E68132",
       "#fdbb44",
       "#1eb955",
       "#22c1e0",

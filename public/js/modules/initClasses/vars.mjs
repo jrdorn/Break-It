@@ -13,8 +13,6 @@ export class Vars {
 
     //color scheme
     this.itemColor = "#6c9950"; //green
-    this.brokenColor1 = "#509199"; //xxxx to display when brick hit once
-    this.brokenColor2 = "#7D5099"; //xxxx to display when brick hit twice
 
     //paddle
     this.paddleHeight = 10;
