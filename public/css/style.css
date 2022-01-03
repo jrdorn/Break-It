@@ -145,3 +145,9 @@ h3 {
 .hidden > * {
   display: none;
 }
+
+/* checkerboard background */
+
+html {
+  background: repeat center/5% url("../img/bg.png");
+}

@@ -3,12 +3,8 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
+  ##screen frame
 
-  #screen frame
-    add greek columns
-
-
-  # score/ lives: white/ gold text, retro font
 
   # Screens
   
@@ -42,8 +38,12 @@ import * as m from "./modules/index.mjs";
       -bg: stars falling across space
 
 
+  # score/ lives: white/ gold text, retro font
+  
+
   # Paddle functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
+
 
   #check browser compatibility 
 
@@ -63,6 +63,7 @@ import * as m from "./modules/index.mjs";
 
     rotating image on canvas: rotate canvas, set image orientation, reset canvas
 
+    bg: gimp, earthbound mint screen
 
 
 
