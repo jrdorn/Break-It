@@ -3,12 +3,11 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-
   #rainbow bricks
+
 
   #screen frame: greek columns
 
-  # new favicon
 
   # score/ lives: white/ gold text, retro font
 
@@ -37,7 +36,7 @@ import * as m from "./modules/index.mjs";
       -ball speed: 2
       -brick health: 2
       -bg: fire/ volcano
-
+    
       Level 3:
       -ball speed: 4
       -brick health: 3
@@ -46,6 +45,8 @@ import * as m from "./modules/index.mjs";
 
   # Paddle color and functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
+
+  #check browser compatibility 
 
 
   # check all comments, refactor
