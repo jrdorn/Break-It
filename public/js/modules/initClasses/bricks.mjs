@@ -9,6 +9,33 @@ export class Bricks {
     this.brickOffsetLeft = 80;
     this.brickOffsetTop = 50;
     this.bricks = [];
+
+    this.health3 = [
+      "#f9524e",
+      "#fdaf45",
+      "#fdbb44",
+      "#1eb955",
+      "#22c1e0",
+      "#BA38E0",
+    ];
+
+    this.health2 = [
+      "#e03c31",
+      "#ff7f41",
+      "#f7ea48",
+      "#2dc84d",
+      "#147bd1",
+      "#753bbd",
+    ];
+
+    this.health1 = [
+      "#ff6663",
+      "#feb144",
+      "#fdfd97",
+      "#99e09e",
+      "#9ec1cf",
+      "#cc99c9",
+    ];
   }
   init() {
     //initialize brick rows and columns

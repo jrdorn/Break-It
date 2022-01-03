@@ -20,13 +20,22 @@ export let drawBricks = (
         Bricks.bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, Bricks.brickWidth, Bricks.brickHeight);
+        //////////////
+        //fill brick color based on health and row
         if (Bricks.bricks[c][r].health === 3) {
-          ctx.fillStyle = itemColor;
+          //
+          ctx.fillStyle = Bricks.health3[c];
+          //
         } else if (Bricks.bricks[c][r].health === 2) {
-          ctx.fillStyle = brokenColor1;
+          //
+          ctx.fillStyle = Bricks.health2[c];
+          //
         } else {
-          ctx.fillStyle = brokenColor2;
+          //
+          ctx.fillStyle = Bricks.health1[c];
+          //
         }
+        //////////////
         ctx.fill();
         ctx.closePath();
       }

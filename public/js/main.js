@@ -3,8 +3,6 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-  #rainbow bricks
-
 
   #screen frame: greek columns
 
