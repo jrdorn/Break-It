@@ -3,63 +3,53 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-  ## ball: four-point gold ninja star, spinning in a circle, with rainbow trailing direction of travel
 
+  #rainbow bricks
 
-  rainbow bricks
+  #screen frame: greek columns
 
-  screen frame: greek columns
+  # new favicon
 
+  # score/ lives: white/ gold text, retro font
 
-  new favicon: ###
-
-  score/ lives: white/ gold text, retro font
-
+  # Screens
   
+    Start screen:
+      -bg: clouds and mountains scrolling
 
-  Start screen:
-    -bg: clouds and mountains scrolling
+    Win screen:
+      -bg: gold text, faint yellow bg
 
+    Congrats screen (between levels)
+      -bg: same as win
 
-  Level 1:
-    -ball speed: 3
-    -brick health: 1
-    -bg: clouds moving
+    Lose screen: 
+      -bg: red text, spotlight in darkness
 
+  # Levels: 
 
+    Level 1:
+      -ball speed: 3
+      -brick health: 1
+      -bg: clouds moving
 
-  Level 2:
-    -ball speed: 2
-    -brick health: 2
-    -bg: fire/ volcano
+    Level 2:
+      -ball speed: 2
+      -brick health: 2
+      -bg: fire/ volcano
 
-
-    Level 3:
-    -ball speed: 4
-    -brick health: 3
-    -bg: stars falling across space
-
-
-  Win screen:
-    -bg: gold text, faint yellow bg
-
-  Congrats screen (between levels)
-    -bg: same as win
-
-  Lose screen: 
-    -bg: red text, spotlight in darkness
+      Level 3:
+      -ball speed: 4
+      -brick health: 3
+      -bg: stars falling across space
 
 
-
-
-
-  fix paddle functionality (ball counted as dropping when it hits edges, 
+  # Paddle color and functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
 
 
-  check all comments
+  # check all comments, refactor
 
-  refactor
 
 
 
