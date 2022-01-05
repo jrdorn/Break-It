@@ -3,16 +3,16 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
-  ##screen frame
+ #adjust game screen components to fit screen
 
 
   # Screens
   
     Start screen:
-      -bg: clouds and mountains scrolling
+      -bg: clouds and mountains scrolling, border around intro text
 
     Win screen:
-      -bg: gold text, faint yellow bg
+      -bg: gold text, faint yellow bg, pixel ivy around screen
 
     Congrats screen (between levels)
       -bg: same as win
@@ -64,6 +64,8 @@ import * as m from "./modules/index.mjs";
     rotating image on canvas: rotate canvas, set image orientation, reset canvas
 
     bg: gimp, earthbound mint screen
+
+    pixel art- gimp, 
 
 
 

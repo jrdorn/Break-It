@@ -10,8 +10,7 @@ body {
   margin: auto;
   margin-top: 3vh;
   padding: 0;
-  max-width: 720px;
-  min-width: 720px;
+  width: 720px;
 }
 
 /* alternative box model */
@@ -150,4 +149,12 @@ h3 {
 
 html {
   background: repeat center/5% url("../img/bg.png");
+}
+
+/* game screen dimensions */
+
+body {
+  margin-top: 8em;
+  width: 650px;
+  height: 400px;
 }
