@@ -166,3 +166,9 @@ body {
   width: 650px;
   height: 400px;
 }
+
+#saWrap {
+  position: absolute;
+  top: 38.73em;
+  border: 5px solid blue;
+}

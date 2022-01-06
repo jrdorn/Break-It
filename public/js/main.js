@@ -85,12 +85,42 @@ import * as m from "./modules/index.mjs";
   let Displays = new m.Displays(); //variables for screens and components to display
   let Sfx = new m.Sfx(); //sound effects
   let Game = new m.Game(); //keep track of whether the game is running or not, if the user wins, and the user's score and lives
+  const body = document.querySelector("body"); //get body element to set background images
+  const startAnim = document.querySelector("#startAnim"); //empty div to hold start animation
 
   //load bricks
   Bricks.init();
 
   //display start screen on page load
+  //
+  //
+  //
   m.displayScreen(Displays.startDisplay);
+  body.style.background = "url('../img/bgStart.png')";
+  startAnim.classList.remove("hidden");
+
+  //
+  //
+  //
+  const MAX_POSITION = 400;
+  const saWrap = document.querySelector("#saWrap");
+  let saPos = 0;
+
+  function animateRaf() {
+    saPos += 0.5;
+    // Reset position
+    if (saPos > MAX_POSITION) {
+      saPos = 0;
+    }
+    // Update position
+    startAnim.style.transform = `translateX(${saPos}px)`;
+    requestAnimationFrame(animateRaf);
+  }
+  animateRaf();
+
+  //
+  //
+  //
 
   // || Event Listeners
   document.addEventListener("keydown", keyDownHandler, false);
@@ -119,6 +149,7 @@ import * as m from "./modules/index.mjs";
       //if no game is running, start game when user presses space
       if (Game.state === 0) {
         run();
+        body.style.background = "red";
       }
     }
   }
