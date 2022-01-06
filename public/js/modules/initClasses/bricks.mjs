@@ -1,8 +1,11 @@
 //keep track of brick count and parameters
 export class Bricks {
   constructor() {
-    this.brickRowCount = 6;
-    this.brickColumnCount = 6;
+    // this.brickRowCount = 6;
+    // this.brickColumnCount = 6;
+    this.brickRowCount = 1;
+    this.brickColumnCount = 1;
+    //
     this.brickWidth = 30;
     this.brickHeight = 12;
     this.brickPadding = 5;
@@ -45,7 +48,9 @@ export class Bricks {
         this.bricks[c][r] = {
           x: 0,
           y: 0,
-          health: 3,
+          // health: 3,
+          health: 1,
+          //
         };
       }
     }

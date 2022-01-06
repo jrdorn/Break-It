@@ -87,6 +87,8 @@ canvas {
 
 #start {
   display: grid;
+  margin-left: 2em;
+  margin-top: 4em;
 }
 
 #start > * {
@@ -113,6 +115,7 @@ h3 {
 
 #win {
   display: grid;
+  margin-left: 2em;
 }
 
 #win > * {
@@ -132,6 +135,7 @@ h3 {
 
 #lose {
   display: grid;
+  margin-bottom: 15em;
 }
 
 #lose > * {
