@@ -39,6 +39,8 @@ import * as m from "./modules/index.mjs";
 
 
   # score/ lives: white/ gold text, retro font
+
+  #animations: fade in/out, flashing start text
   
 
   # Paddle functionality (ball counted as dropping when it hits edges, 
@@ -63,9 +65,12 @@ import * as m from "./modules/index.mjs";
 
     rotating image on canvas: rotate canvas, set image orientation, reset canvas
 
-    bg: gimp, earthbound mint screen
+    bg: gimp, earthbound mint screen, adobe color, patagonia
 
-    pixel art- gimp, 
+    pixel art- gimp
+
+    taking space after display:none
+
 
 
 

@@ -48,14 +48,18 @@ body {
 }
 
 canvas {
-  background: #1e1e1e;
+  border: 5px solid red;
+  position: relative;
+  width: 73.7em;
+  height: 39em;
+  bottom: 12.5em;
 }
 
 /* display score and lives */
 
 #scorelives {
   font-size: 2rem;
-  margin-top: 1.5em;
+  margin-top: -3.5em;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -68,8 +72,8 @@ canvas {
 
 #hearts {
   position: absolute;
-  right: 2em;
-  top: 19.7em;
+  right: 3em;
+  top: 27.5em;
   min-width: 75px;
 }
 
