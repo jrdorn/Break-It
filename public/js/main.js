@@ -3,53 +3,47 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
- #adjust game screen components to fit screen
 
 
-  # Screens
   
-    Start screen:
-      -bg: clouds and mountains scrolling, border around intro text
+  # Start screen:
+    -bg: clouds and mountains scrolling, border around intro text
+  #animations: fade in/out, flashing start text
 
-    Win screen:
-      -bg: gold text, faint yellow bg, pixel ivy around screen
+  # Win screen:
+    -bg: gold text, faint yellow bg, pixel ivy around screen
 
-    Congrats screen (between levels)
-      -bg: same as win
+  # Congrats screen (between levels)
+    -bg: same as win
 
-    Lose screen: 
-      -bg: red text, spotlight in darkness
+  # Lose screen: 
+    -bg: red text, spotlight in darkness
 
-  # Levels: 
 
-    Level 1:
-      -ball speed: 3
-      -brick health: 1
-      -bg: clouds moving
 
-    Level 2:
-      -ball speed: 2
-      -brick health: 2
-      -bg: fire/ volcano
-    
-      Level 3:
-      -ball speed: 4
-      -brick health: 3
-      -bg: stars falling across space
+  # Level 1:
+    -ball speed: 3
+    -brick health: 1
+    -bg: clouds moving
+
+  # Level 2:
+    -ball speed: 2
+    -brick health: 2
+    -bg: fire/ volcano
+  
+    # Level 3:
+    -ball speed: 4
+    -brick health: 3
+    -bg: stars falling across space
 
 
   # score/ lives: white/ gold text, retro font
 
-  #animations: fade in/out, flashing start text
   
 
   # Paddle functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
-
-
   #check browser compatibility 
-
-
   # check all comments, refactor
 
 
@@ -70,6 +64,8 @@ import * as m from "./modules/index.mjs";
     pixel art- gimp
 
     taking space after display:none
+
+    setting overflow: hidden for infinite looping start animation
 
 
 
@@ -102,21 +98,21 @@ import * as m from "./modules/index.mjs";
   //
   //
   //
-  const MAX_POSITION = 400;
+  const MAX_POSITION = 0;
   const saWrap = document.querySelector("#saWrap");
-  let saPos = 0;
+  let saPos = -400;
 
-  function animateRaf() {
-    saPos += 0.5;
+  let startAnimFrame = () => {
+    saPos += 0.25;
     // Reset position
     if (saPos > MAX_POSITION) {
-      saPos = 0;
+      saPos = -400;
     }
     // Update position
     startAnim.style.transform = `translateX(${saPos}px)`;
-    requestAnimationFrame(animateRaf);
-  }
-  animateRaf();
+    requestAnimationFrame(startAnimFrame);
+  };
+  startAnimFrame();
 
   //
   //

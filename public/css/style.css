@@ -170,5 +170,6 @@ body {
 #saWrap {
   position: absolute;
   top: 38.73em;
-  border: 5px solid blue;
+  overflow: hidden;
+  width: 650px;
 }
