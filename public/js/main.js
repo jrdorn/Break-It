@@ -5,50 +5,48 @@ import * as m from "./modules/index.mjs";
 
 
 
-  
-  # Start screen:
-    -border around intro text
-  #animations: fade in/out, flashing start text
 
-  # Win screen:
-    -bg: gold text, faint yellow bg, pixel ivy around screen
+
+
+  # Win screen
 
   # Congrats screen (between levels)
-    -bg: same as win
 
   # Lose screen: 
-    -bg: red text, spotlight in darkness
-
+    -red text
 
 
   # Level 1:
     -ball speed: 3
     -brick health: 1
-    -bg: clouds moving
+    -bg: blue circles
 
   # Level 2:
     -ball speed: 2
     -brick health: 2
-    -bg: fire/ volcano
+    -bg: red hexagons
   
     # Level 3:
     -ball speed: 4
     -brick health: 3
-    -bg: stars falling across space
+    -bg: black diamonds
 
 
-  # score/ lives: white/ gold text, retro font
+    #animations: fade in/out between screen
+
+
+    #check browser compatibility 
+    # check all comments, refactor
 
   
 
-  # Paddle functionality (ball counted as dropping when it hits edges, 
+    Future: 
+
+    lvl 1 clouds moving against blue sky 
+    lvl 2 fire/ volcano with animated embers
+    lvl 3 stars falling across space
+    improved paddle functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
-  #check browser compatibility 
-  # check all comments, refactor
-
-
-
-
 
 
   notes:
@@ -92,6 +90,8 @@ import * as m from "./modules/index.mjs";
   body.style.background = "url('../img/bgStart.png')";
 
   //mountain animation loop
+  let stopAnim = false;
+
   startAnim.classList.remove("hidden");
 
   const max = 0;
@@ -108,6 +108,10 @@ import * as m from "./modules/index.mjs";
 
     //update position
     startAnim.style.transform = `translateX(${saPos}px)`;
+    if (stopAnim) {
+      startAnim.classList.add("hidden");
+      return;
+    }
     requestAnimationFrame(startAnimFrame);
   };
   startAnimFrame();
@@ -143,6 +147,7 @@ import * as m from "./modules/index.mjs";
       //if no game is running, start game when user presses space
       if (Game.state === 0) {
         run();
+        stopAnim = true;
         body.style.background = "red";
       }
     }

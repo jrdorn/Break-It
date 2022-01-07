@@ -48,7 +48,7 @@ body {
 }
 
 canvas {
-  border: 5px solid red;
+  border: 5px solid blue;
   position: relative;
   width: 73.7em;
   height: 39em;
@@ -92,7 +92,7 @@ canvas {
 #start {
   display: grid;
   margin-left: 2em;
-  margin-top: 4em;
+  margin-top: -4em;
 }
 
 #start > * {
@@ -157,6 +157,17 @@ h3 {
 
 html {
   background: repeat center/5% url("../img/bg.png");
+}
+
+/* game screen bg's */
+
+#congrats,
+#win {
+  background: url("../img/bgCongratsWin.png");
+}
+
+#lose {
+  background: url("../img/bgLose.png");
 }
 
 /* game screen dimensions */
