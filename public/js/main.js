@@ -3,40 +3,11 @@ import * as m from "./modules/index.mjs";
 /** 
  ||| TODO
 
+ 
 
 
-
-
-
-  # Win screen
-
-  # Congrats screen (between levels)
-
-  # Lose screen: 
-    -red text
-
-
-  # Level 1:
-    -ball speed: 3
-    -brick health: 1
-    -bg: blue circles
-
-  # Level 2:
-    -ball speed: 2
-    -brick health: 2
-    -bg: red hexagons
   
-    # Level 3:
-    -ball speed: 4
-    -brick health: 3
-    -bg: black diamonds
-
-
-    #animations: fade in/out between screen
-
-
-    #check browser compatibility 
-    # check all comments, refactor
+  #check all comments, refactor
 
   
 
@@ -47,6 +18,19 @@ import * as m from "./modules/index.mjs";
     lvl 3 stars falling across space
     improved paddle functionality (ball counted as dropping when it hits edges, 
     angle of edges) 
+    fade in/out between screens
+    Congrats screen (between levels)
+        Level 1:
+        -ball speed: 3
+        -brick health: 1
+
+      Level 2:
+        -ball speed: 2
+        -brick health: 2
+      
+        Level 3:
+        -ball speed: 4
+        -brick health: 3
 
 
   notes:
@@ -116,10 +100,6 @@ import * as m from "./modules/index.mjs";
   };
   startAnimFrame();
 
-  //
-  //
-  //
-
   // || Event Listeners
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -148,7 +128,9 @@ import * as m from "./modules/index.mjs";
       if (Game.state === 0) {
         run();
         stopAnim = true;
-        body.style.background = "red";
+        //
+        body.style.background = "url('../img/lvl1.png')"; //level 1 bg
+        //
       }
     }
   }

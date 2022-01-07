@@ -48,18 +48,17 @@ body {
 }
 
 canvas {
-  border: 5px solid blue;
   position: relative;
   width: 73.7em;
-  height: 39em;
-  bottom: 12.5em;
+  height: 45em;
+  bottom: 1em;
 }
 
 /* display score and lives */
 
 #scorelives {
   font-size: 2rem;
-  margin-top: -3.5em;
+  margin-top: -0.5em;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -72,14 +71,14 @@ canvas {
 
 #hearts {
   position: absolute;
-  right: 3em;
-  top: 27.5em;
+  right: 11em;
+  top: 28.5em;
   min-width: 75px;
 }
 
 #lives {
   position: absolute;
-  right: 8em;
+  right: 17em;
 }
 
 .heart {
@@ -92,7 +91,7 @@ canvas {
 #start {
   display: grid;
   margin-left: 2em;
-  margin-top: -4em;
+  margin-top: -5em;
 }
 
 #start > * {
@@ -106,11 +105,13 @@ h1 {
 }
 
 h2 {
+  margin-top: 1.5em;
   font-size: 1.5rem;
   justify-self: center;
 }
 
 h3 {
+  margin-bottom: 17em;
   font-size: 1.25rem;
   justify-self: center;
 }
@@ -119,7 +120,7 @@ h3 {
 
 #win {
   display: grid;
-  margin-left: 2em;
+  height: 400px;
 }
 
 #win > * {
@@ -139,18 +140,15 @@ h3 {
 
 #lose {
   display: grid;
-  margin-bottom: 15em;
+  height: 400px;
 }
 
 #lose > * {
   justify-self: center;
 }
 
-/* hide screens  */
-
-.hidden,
-.hidden > * {
-  display: none;
+#lose h2 {
+  margin-top: 5em;
 }
 
 /* checkerboard background */
@@ -183,4 +181,17 @@ body {
   top: 38.73em;
   overflow: hidden;
   width: 650px;
+}
+
+/* hide screens  */
+
+.hidden,
+#congrats.hidden,
+#win.hidden,
+#lose.hidden,
+#saWrap.hidden,
+#myCanvas.hidden,
+#scorelives.hidden,
+.hidden > * {
+  display: none;
 }
