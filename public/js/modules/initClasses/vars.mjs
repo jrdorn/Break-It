@@ -12,7 +12,7 @@ export class Vars {
     this.ctx = this.canvas.getContext("2d");
 
     //color scheme
-    this.itemColor = "#6c9950"; //green
+    this.itemColor = "#fbfbfb"; //white
 
     //paddle
     this.paddleHeight = 10;

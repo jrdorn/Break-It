@@ -7,7 +7,7 @@ import * as m from "./modules/index.mjs";
 
   
   # Start screen:
-    -bg: clouds and mountains scrolling, border around intro text
+    -border around intro text
   #animations: fade in/out, flashing start text
 
   # Win screen:
@@ -88,27 +88,25 @@ import * as m from "./modules/index.mjs";
   Bricks.init();
 
   //display start screen on page load
-  //
-  //
-  //
   m.displayScreen(Displays.startDisplay);
   body.style.background = "url('../img/bgStart.png')";
+
+  //mountain animation loop
   startAnim.classList.remove("hidden");
 
-  //
-  //
-  //
-  const MAX_POSITION = 0;
+  const max = 0;
   const saWrap = document.querySelector("#saWrap");
   let saPos = -400;
 
   let startAnimFrame = () => {
     saPos += 0.25;
-    // Reset position
-    if (saPos > MAX_POSITION) {
+
+    //reset position
+    if (saPos > max) {
       saPos = -400;
     }
-    // Update position
+
+    //update position
     startAnim.style.transform = `translateX(${saPos}px)`;
     requestAnimationFrame(startAnimFrame);
   };
