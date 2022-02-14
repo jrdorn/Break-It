@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 //middleware
 const createError = require("http-errors");
@@ -84,9 +85,4 @@ function onError(error) {
 //   }
 // });
 
-//render game
-app.get("/", (req, res) => {
-  res.render("index.html");
-});
-
-app.use(express.static("src"));
+app.use(express.static(path.join(__dirname, "src")));

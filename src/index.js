@@ -1,4 +1,4 @@
-import * as m from "./js/modules/main.mjs";
+import * as m from "./js/main.mjs";
 
 (() => {
   // || Initialize
