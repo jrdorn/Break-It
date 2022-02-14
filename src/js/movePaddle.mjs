@@ -1,4 +1,4 @@
-//move paddle back and forth
+//move paddle left and right
 export let movePaddle = (Vars) => {
   if (
     Vars.rightPressed &&

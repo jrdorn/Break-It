@@ -6,7 +6,6 @@ export let wallPaddleCollision = (Sfx, Vars, Game, Bricks, Displays, m) => {
     Vars.x + Vars.dx < Vars.ballRadius
   ) {
     Sfx.wallSound.play();
-    // console.log(canvas.width); 400
     Vars.dx = -Vars.dx;
   }
 

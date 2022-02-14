@@ -20,7 +20,6 @@ export let drawBricks = (
         Bricks.bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, Bricks.brickWidth, Bricks.brickHeight);
-        //////////////
         //fill brick color based on health and row
         if (Bricks.bricks[c][r].health === 3) {
           //

@@ -3,7 +3,7 @@ export class Bricks {
   constructor() {
     this.brickRowCount = 6;
     this.brickColumnCount = 6;
-    //
+
     this.brickWidth = 30;
     this.brickHeight = 12;
     this.brickPadding = 5;
@@ -11,15 +11,17 @@ export class Bricks {
     this.brickOffsetTop = 50;
     this.bricks = [];
 
+    //max health
     this.health3 = [
-      "#f9524e",
-      "#E68132",
-      "#fdbb44",
-      "#1eb955",
-      "#22c1e0",
-      "#BA38E0",
+      "#f9524e", //red
+      "#E68132", //orange
+      "#fdbb44", //yellow
+      "#1eb955", //green
+      "#22c1e0", //blue
+      "#BA38E0", //purple
     ];
 
+    //brick hit once
     this.health2 = [
       "#e03c31",
       "#ff7f41",
@@ -29,6 +31,7 @@ export class Bricks {
       "#753bbd",
     ];
 
+    //brick hit twice
     this.health1 = [
       "#ff6663",
       "#feb144",

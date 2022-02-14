@@ -7,6 +7,16 @@
     "start": "node ./server.js",
     "test": "jest"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "moduleNameMapper": {
+    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jrdorn/Break-It.git"
@@ -26,6 +36,7 @@
     "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.68.0",

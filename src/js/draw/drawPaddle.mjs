@@ -1,6 +1,4 @@
 //draw paddle on a canvas
-//coordinates (paddleX), width(paddleWidth, height(paddleHeight), color(itemColor), context (ctx),
-//canvasHeight (canvas.height)
 
 export let drawPaddle = (coords, context, canvasHeight, width, height) => {
   context.beginPath();

@@ -1,3 +1,5 @@
+// consolidate modules to export to index
+
 export { Vars } from "./initClasses/vars.mjs";
 export { Displays } from "./initClasses/displays.mjs";
 export { Bricks } from "./initClasses/bricks.mjs";
