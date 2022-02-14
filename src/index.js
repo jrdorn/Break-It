@@ -1,4 +1,10 @@
 import * as m from "./js/main.mjs";
+import "./css/style.css";
+
+import bgStart from "./img/bgStart.png";
+import lvl1 from "./img/lvl1.png";
+import ninja_star from "./img/ninja_star.png";
+import heart from "./img/heart.png";
 
 (() => {
   // || Initialize
@@ -17,7 +23,7 @@ import * as m from "./js/main.mjs";
 
   //display start screen on page load
   m.displayScreen(Displays.startDisplay);
-  body.style.background = "url('../img/bgStart.png')";
+  body.style.background = `url(${bgStart})`;
 
   //mountain animation loop
   let stopAnim = false;
@@ -75,7 +81,7 @@ import * as m from "./js/main.mjs";
         run();
         stopAnim = true;
         //
-        body.style.background = "url('../img/lvl1.png')"; //level 1 bg
+        body.style.background = `url(${lvl1})`; //level 1 bg
         //
       }
     }
@@ -101,7 +107,7 @@ import * as m from "./js/main.mjs";
     );
 
     //draw ball
-    m.drawBall("img/ninja_star.png", Vars.ctx, Vars.x, Vars.y);
+    m.drawBall(ninja_star, Vars.ctx, Vars.x, Vars.y);
 
     //draw paddle
     m.drawPaddle(
@@ -116,7 +122,7 @@ import * as m from "./js/main.mjs";
     m.drawScore(Vars.myScore, Game.score);
     Vars.myLives.innerHTML = m.drawLives(
       Game.lives,
-      '<img class="heart" src="img/heart.png" />'
+      `<img class="heart" src=${heart} />`
     );
 
     //handle collision when ball hits brick

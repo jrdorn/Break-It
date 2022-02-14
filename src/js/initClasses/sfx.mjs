@@ -1,4 +1,5 @@
 //sound effects for game
+
 export class Sfx {
   constructor() {
     this.brickSounds = [
@@ -8,6 +9,7 @@ export class Sfx {
       new Audio("audio/brick4.wav"),
       new Audio("audio/brick5.wav"),
     ];
+
     this.startSound = new Audio("audio/start.wav");
     this.winSound = new Audio("audio/win.wav");
     this.loseSound = new Audio("audio/lose.wav");
