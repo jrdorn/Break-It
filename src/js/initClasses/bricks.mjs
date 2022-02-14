@@ -7,7 +7,7 @@ export class Bricks {
     this.brickWidth = 30;
     this.brickHeight = 12;
     this.brickPadding = 5;
-    this.brickOffsetLeft = 80;
+    this.brickOffsetLeft = 100;
     this.brickOffsetTop = 50;
     this.bricks = [];
 

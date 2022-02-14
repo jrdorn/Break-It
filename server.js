@@ -88,4 +88,4 @@ function onError(error) {
 //   res.render("index.html");
 // });
 
-app.use(express.static("public"));
+app.use(express.static("src"));
