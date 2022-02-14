@@ -69,18 +69,23 @@ canvas {
   margin-right: auto;
 }
 
-#hearts {
-  position: absolute;
-  right: 11em;
-  top: 28.5em;
-  min-width: 75px;
-}
-
 #lives {
-  position: absolute;
-  right: 17em;
+  margin-left: 17em;
+  /* position: absolute;
+  right: 17em; */
 }
 
+/* row of hearts */
+#hearts {
+  /* position: relative;
+  right: 11em;
+  top: 28.5em; */
+  min-width: 75px;
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+/* individual hearts */
 .heart {
   width: 20px;
   margin-left: 5px;
