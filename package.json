@@ -5,6 +5,7 @@
   "private": "true",
   "scripts": {
     "start": "node ./server.js",
+    "build": "npx webpack",
     "test": "jest"
   },
   "repository": {
