@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Break It</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Start screen -->
+    <div id="start" class="hidden">
+      <h1>BREAK IT</h1>
+      <h2>PRESS SPACEBAR TO START</h2>
+      <h3>USE ARROW KEYS TO MOVE</h3>
+    </div>
+    <div id="saWrap">
+      <img id="startAnim" class="hidden" src="./src/img/bgStartAnimation.png" />
+    </div>
+
+    <!-- Congrats screen -->
+    <div id="congrats" class="hidden">
+      <h1>CONGRATULATIONS!</h1>
+      <h2>PRESS SPACEBAR TO CONTINUE</h2>
+    </div>
+
+    <!-- Win screen -->
+    <div id="win" class="hidden">
+      <h1>YOU WIN!</h1>
+      <h2>PRESS SPACEBAR TO PLAY AGAIN</h2>
+    </div>
+
+    <!-- Lose screen -->
+    <div id="lose" class="hidden">
+      <h1>GAME OVER</h1>
+      <h2>PRESS SPACEBAR TO TRY AGAIN</h2>
+    </div>
+
+    <!-- Canvas to draw game on -->
+    <div id="myCanvas"><canvas class="hidden"></canvas></div>
+
+    <!-- Container to display score and lives -->
+    <div id="scorelives" class="hidden">
+      <span id="score"></span><span id="lives">LIVES: </span
+      ><span id="hearts"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

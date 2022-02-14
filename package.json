@@ -2,7 +2,7 @@
   "name": "break-it",
   "version": "1.0.0",
   "description": "Break It is a JavaScipt block breaker game. Users move a paddle back and forth across the screen to hit a ball to break bricks while avoiding letting the ball drop.",
-  "main": "js/server.js",
+  "private": "true",
   "scripts": {
     "start": "nodemon ./server.js",
     "test": "jest"
@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/jrdorn/Break-It.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Josh Dorn",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jrdorn/Break-It/issues"
   },

@@ -84,8 +84,9 @@ function onError(error) {
 //   }
 // });
 
-// app.get("/", (req, res) => {
-//   res.render("index.html");
-// });
+//render game
+app.get("/", (req, res) => {
+  res.render("index.html");
+});
 
 app.use(express.static("src"));
